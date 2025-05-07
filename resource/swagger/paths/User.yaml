@@ -1,0 +1,32 @@
+post:
+  summary: "Create a new User"
+  tags:
+    - User
+  operationId: createUser
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "#/components/schemas/UserCreateDto"
+  responses:
+    "201":
+      description: "User successful created"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/UserReadDto"
+    "400":
+      description: "Bad Request"
+
+    "500":
+      description: "Internal Server Error"
+
+components:
+  schemas:
+    UserCreateDto:
+      $ref: "../schemas/user/UserCreateDto.yaml"
+
+    UserReadDto:
+      $ref: "../schemas/user/UserReadDto.yaml"
+

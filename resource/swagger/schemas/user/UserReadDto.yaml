@@ -1,0 +1,38 @@
+---
+type: object
+
+required:
+  - id
+  - firstName
+  - lastName
+  - email
+  - efMember
+
+properties:
+  id:
+    $ref: "../common/Id.yaml"
+
+  firstName:
+    type: string
+
+  lastName:
+    type: string
+
+  dateOfBirth:
+    type: string
+    format: date
+    nullable: true
+    x-omitempty: true
+
+  email:
+    type: string
+    format: email
+
+  member:
+    type: boolean
+    default: false
+
+  efNumber:
+    type: number
+    nullable: true
+    x-omitempty: true

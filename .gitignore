@@ -1,2 +1,5 @@
 # idea
 .idea/
+
+# generated code
+.generated/*

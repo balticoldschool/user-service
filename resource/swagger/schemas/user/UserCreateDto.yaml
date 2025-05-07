@@ -1,0 +1,39 @@
+---
+type: object
+
+required:
+  - firstName
+  - lastName
+  - email
+  - password
+  - efMember
+
+properties:
+  firstName:
+    type: string
+
+  lastName:
+    type: string
+
+  dateOfBirth:
+    type: string
+    format: date
+    nullable: true
+    x-omitempty: true
+
+  email:
+    type: string
+    format: email
+
+  password:
+    type: string
+    minLength: 8
+
+  member:
+    type: boolean
+    default: false
+
+  efNumber:
+    type: number
+    nullable: true
+    x-omitempty: true

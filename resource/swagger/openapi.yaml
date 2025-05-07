@@ -1,0 +1,23 @@
+openapi: 3.0.3
+
+info:
+  title: "EFC User Service"
+  version: 0.0.1
+
+servers:
+  - url: http://localhost:8080
+    description: "for local development"
+
+paths:
+  /user:
+    $ref: "./paths/User.yaml"
+
+
+components:
+  schemas:
+    UserCreateDto:
+      $ref: "./schemas/user/UserCreateDto.yaml"
+
+    UserReadDto:
+      $ref: "./schemas/user/UserReadDto.yaml"
+
