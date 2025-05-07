@@ -1,7 +1,7 @@
 package main
 
-import "fmt"
+import "github.com/balticoldschool/user-service/src/app"
 
 func main() {
-	fmt.Println("hallo welt");
+	app.StartApp()
 }
