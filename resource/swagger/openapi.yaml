@@ -11,6 +11,9 @@ servers:
 paths:
   /user:
     $ref: "./paths/User.yaml"
+  /user/{userId}:
+    $ref: "./paths/GetUserById.yaml"
+
 
 
 components:
@@ -20,4 +23,3 @@ components:
 
     UserReadDto:
       $ref: "./schemas/user/UserReadDto.yaml"
-

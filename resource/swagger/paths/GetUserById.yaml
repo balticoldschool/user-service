@@ -1,0 +1,26 @@
+get:
+  summary: "Returns a UserReadDto"
+  tags:
+    - User
+  operationId: getUserById
+  parameters:
+    - $ref: "../schemas/parameters/UserId.yaml"
+  responses:
+    "200":
+      description: "User found"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/UserReadDto"
+    "400":
+      description: "Bad Request"
+    "404":
+      description: "Not Found"
+    "500":
+      description: "Internal Server Error"
+            
+components:
+  schemas:
+    UserReadDto:
+      $ref: "../schemas/user/UserReadDto.yaml"
+

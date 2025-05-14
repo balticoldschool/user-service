@@ -12,6 +12,6 @@ var (
 )
 
 func StartApp() {
-	api.RegisterHandlers(router, user.NewUserHandler())
+	api.RegisterHandlers(router, user.NewUserHandler(user.NewUserService()))
 	log.Fatal(router.Run(":8080"))
 }

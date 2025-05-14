@@ -1,0 +1,7 @@
+---
+name: userId
+in: path
+required: true
+description: "A user's unique identifier"
+schema:
+  $ref: "../common/Id.yaml"
